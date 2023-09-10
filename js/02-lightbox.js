@@ -15,18 +15,14 @@ function markUp(galleryItems) {
     .join(' ');            
 }
 
-const galleryEl = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery',);
 const markup = markUp(galleryItems);
 galleryEl.insertAdjacentHTML('beforeend', markup);
 
-    
-let gallery = new SimpleLightbox('.gallery a');
-let event = 'show.simplelightbox' ;
-gallery.on(event, function () {
-//     gallery.captionsData = "jhcghgcihcgk";
-//    captionDelay = 250;
-//     captionPosition = 'bottom';
+let lightbox = new SimpleLightbox(('.gallery a') ,{ 
+    captionsData: document.querySelector('.gallery a').description,
+    captionPosition	:'bottom',
+    captionDelay	: 250,
+})
 
-	gallery.next();
-});
 
